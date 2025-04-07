@@ -124,7 +124,7 @@ begin
         -- go all the way down DOWN (how many clock cycles should that take?)
         w_up_down <= '0'; 
   
-		  	
+		w_reset <= '0';  	
 		wait; -- wait forever
 	end process;	
 	-----------------------------------------------------	

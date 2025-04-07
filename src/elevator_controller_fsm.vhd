@@ -127,10 +127,16 @@ begin
 	-------------------------------------------------------------------------------------------------------
 	
 
-	           
-	state_process: process(i_clk)
-	   begin
-	       if 
+	state_register : process(i_clk)
+	begin
+        if rising_edge(i_clk) then
+           if i_reset = '1' then
+               f_Q <= s_floor2;
+           else
+                f_Q <= f_Q_next;
+            end if;
+        end if;
+	end process state_register;
 
 
 
